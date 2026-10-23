@@ -9,14 +9,22 @@
 <body>
   <div class="container">
     <h1>Water Quest</h1>
-    <p class="game-instructions">Collect 20 items to complete the game!</p>
+    <p class="game-instructions">Collect 20 items in 30 seconds to complete the game!</p>
     <div class="stats">
       <p>Cans Collected: <span id="current-cans">0</span></p>
       <p>Time Left: <span id="timer">30</span>s</p>
     </div>
-    <div id="achievements" class="achievement"></div>
+    <div id="celebration" aria-hidden="true"></div>
+    <div id="penalty-flash" aria-hidden="true"></div>
     <div class="game-grid"></div>
-    <button id="start-game">Start Game</button>
+    <div class="game-controls">
+      <button id="start-game">Start Game</button>
+      <button id="reset-game" type="button">Reset</button>
+    </div>
+    <section id="achievements" class="message-panel" aria-live="polite">
+      <p class="message-label">Quest Status</p>
+      <p id="achievement-message">Press Start Game to begin!</p>
+    </section>
   </div>
   <script src="script.js"></script>
 </body>
